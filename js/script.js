@@ -14,21 +14,31 @@ for(let i = 1; i <= 100; i++) {
     newElement.className = "square";
     
     if(i % 3 == 0 && i % 5 == 0) {
+
         // se "i" è divisibile sia per 3 che per 5
         console.log("FizzBuzz");
         newElement.innerHTML = "FizzBuzz";
+        newElement.className += " fizz-buzz";
+
     } else if(i % 3 == 0){
+
         // se "i" è divisibile solo per 3
         console.log("Fizz");
         newElement.innerHTML = "Fizz";
+        newElement.className += " fizz";
+
     } else if(i % 5 == 0){
+
         // se "i" è divisibile solo per 5
         console.log("Buzz");
         newElement.innerHTML = "Buzz";
+        newElement.className += " buzz";
+
     } else {
         // se "i" non è divisibile ne per 3 ne per 5
         console.log(i);
         newElement.innerHTML = i;
+        newElement.className += " base-number";
     }
 
     containerElement.append(newElement);
